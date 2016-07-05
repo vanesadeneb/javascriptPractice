@@ -1,3 +1,5 @@
+var Queue = require('./queue');
+//console.dir(_queue);
 function hotPotato(namelist, num){
 	var simqueue = new Queue();
 	for(var name = 0; name < namelist.length; name++){

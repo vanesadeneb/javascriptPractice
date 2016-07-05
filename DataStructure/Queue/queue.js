@@ -14,13 +14,8 @@ function Queue(){
 	}
 };
 
-var q = new Queue();
 
-console.log(q.enqueue(4));
-console.log(q.enqueue("dog"));
-console.log(q.enqueue("True"));
-console.log(q.size());
-console.log(q.isEmpty());
+module.exports = Queue;
 
 
 
