@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Location Nodes</title>
+	<script>
+		function change_color(){
+			document.childNodes[1].childNodes[2].childNodes[1].style.color="red";
+		}
+		function change_color2(){
+			document.getElementsByTagName("h2")[0].style.color="yellow";
+		}
+		function change_color3(){
+			document.getElementById("cute_text").style.color="blue";
+		}
+		function change_color4(){
+			var the_node = document.getElementById("thisNode");
+			the_node.setAttribute("style","color:red");
+		}
+	</script>
+</head>
+<body>
+	<h2 style="color:black" id="cute_text">Click on a button to change the colour</h2>
+	<h1 id="thisNode">Attribute</h1>
+	<form action="">
+		<input type="button" onclick="change_color()" value="Change using method 1">
+		<input type="button" onclick="change_color2()" value="Change using method 2">
+		<input type="button" onclick="change_color3()" value="Change using methid 3">
+		<input type="button" onclick="change_color4()" value="Change using methid 4">
+	</form>
+</body>
+</html>
