@@ -7,14 +7,14 @@
 		var the_timer, x_position = 0, the_image;
 		function set_timer(){
 			the_image = document.getElementById("stones_image");
-			x_position = x_position 
-			 1;
-			the_image.style.left = x_position;
-			the_timer = setTimeout(set_timer, 50);
+			x_position = x_position + 1;
+			the_image.style.left = x_position + 'px';
+/*			the_timer = setTimeout(set_timer, 50);*/
 		}
 	</script>
 </head>
-<body onload = "set_timer()">
+<body onload = "the_timer=setInterval(set_timer,50)">
 	<img src="img/stones.jpg" id="stones_image" style = "position:absolute; left:0">
+	<button onclick="clearInterval(the_timer)">Stop!</button>
 </body>
 </html>
