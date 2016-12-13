@@ -15,7 +15,7 @@ String.prototype.findChars = function(letters){
 }
 
 function deleteTheChar(cadena,chars){
-	var indexChar = cadena.findChars(chars);
+  var indexChar = cadena.findChars(chars);
   var newString = cadena.slice(0,indexChar[0]);
 	for(var i = 0; i < indexChar.length; i++){
     newString += cadena.slice(indexChar[i] + 1, indexChar[i + 1]);
