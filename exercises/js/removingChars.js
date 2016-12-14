@@ -14,15 +14,18 @@ String.prototype.findChars = function(letters){
 	return index;
 }
 
-function deleteTheChar(cadena,chars){
-  var indexChar = cadena.findChars(chars);
-  var newString = cadena.slice(0,indexChar[0]);
-	for(var i = 0; i < indexChar.length; i++){
-    newString += cadena.slice(indexChar[i] + 1, indexChar[i + 1]);
-    return newString;
-	}
+var deleteTheChars = function (cadena, chars) {
+	var dividedString = cadena.split("");
+	var indexHaveToDelete = cadena.findChars(chars);
+	for (var i = 0; i < indexHaveToDelete.length; i++) {
+		delete dividedString[indexHaveToDelete[i]];
+	} 
+
+	var newString = dividedString.join('');
+	return newString;
+	
 }
 
-deleteTheChar("how are you", "abc");
-deleteTheChar("hello world", "def");
-	
+deleteTheChars("how are you", "abc");
+deleteTheChars("hello world", "def");
+deleteTheChars("pepe pecas", "pa");
