@@ -14,7 +14,7 @@ String.prototype.findChars = function(letters){
 	return index;
 }
 
-var deleteTheChars = function (cadena, chars) {
+function deleteTheChars(cadena, chars) {
 	var dividedString = cadena.split("");
 	var indexHaveToDelete = cadena.findChars(chars);
 	for (var i = 0; i < indexHaveToDelete.length; i++) {
