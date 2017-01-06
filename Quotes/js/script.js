@@ -34,8 +34,7 @@ var timer = new Timer(function() {
 }, 10000);
 
 var clickButton = function(){ 
-//		this.clicked = true;
-		timer.start();
+		timer.reset();
 		printQuote();
 		backgroundColor();	
 	}
