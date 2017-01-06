@@ -33,16 +33,12 @@ var timer = new Timer(function() {
     backgroundColor();
 }, 10000);
 
-var button = { 
-	clicked: false,
-	click: function(){
-		this.clicked = true;
+var clickButton = function(){ 
+//		this.clicked = true;
 		timer.start();
 		printQuote();
-		backgroundColor();
-		
+		backgroundColor();	
 	}
-};
 
 //Change the phrase and background color after certain amount of time passes
-document.getElementById('loadQuote').addEventListener("click", button.click, false);
+document.getElementById('loadQuote').addEventListener("click", clickButton, false);

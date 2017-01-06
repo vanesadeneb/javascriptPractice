@@ -1,5 +1,5 @@
-function Timer(fn, t) {
-    var timerObj = setInterval(fn, t);
+function Timer(fn, time) {
+    var timerObj = setInterval(fn, time);
 
     this.stop = function() {
         if (timerObj) {
@@ -13,14 +13,14 @@ function Timer(fn, t) {
     this.start = function() {
         if (!timerObj) {
             this.stop();
-            timerObj = setInterval(fn, t);
+            timerObj = setInterval(fn, time);
         }
         return this;
     }
 
     // start with new interval, stop current interval
-    this.reset = function(newT) {
-        t = newT;
+    this.reset = function(newTime) {
+        time = newTime;
         return this.stop().start();
     }
 }
