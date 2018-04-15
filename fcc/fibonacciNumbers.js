@@ -1,6 +1,6 @@
 function sumFibs(num) {
-  fibonnacciNumber = [1,1];
-  resultSumFibonacciNum = 0;
+  var fibonnacciNumber = [1,1];
+  var resultSumFibonacciNum = 0;
   for(var i = 0; i < fibonnacciNumber.length; i++){
     nextFibonacci = fibonnacciNumber[i] + fibonnacciNumber[i+1];
     if(nextFibonacci <= num){
